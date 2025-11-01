@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IB English Text Analysis Challenge</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>IB English Text Analysis Challenge</h1>
+    <p class="tagline">Sharpen your interpretive skills with randomized scenarios and reflective prompts.</p>
+  </header>
+
+  <main>
+    <section id="challenge" aria-live="polite">
+      <button id="new-challenge" type="button">Generate Challenge</button>
+
+      <article class="challenge-card hidden" id="challenge-card">
+        <h2 class="text-type" id="text-type"></h2>
+        <p class="prompt" id="prompt"></p>
+
+        <div class="difficulty">
+          <span id="difficulty-label" class="badge"></span>
+          <p id="difficulty-description"></p>
+        </div>
+
+        <label class="response" for="response-input">Your response:</label>
+        <textarea id="response-input" rows="5" placeholder="Outline your analysis here..."></textarea>
+
+        <section class="reflection">
+          <h3>Reflection Tips</h3>
+          <ul>
+            <li>Consider the text's context and potential biases.</li>
+            <li>Brainstorm alternative interpretations that challenge the obvious.</li>
+            <li>Note how visual elements (if any) interact with the written content.</li>
+          </ul>
+        </section>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built for IB English students practicing Paper 1 analysis.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
