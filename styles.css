@@ -1,0 +1,162 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f8f9fb;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --text: #1d1d1d;
+  --accent: #0055ff;
+  --accent-dark: #003bb3;
+  --border: #d8dbe1;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(160deg, #e8f0ff 0%, #fef9ff 100%);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+header {
+  background: transparent;
+}
+
+.tagline {
+  max-width: 48rem;
+  margin: 0.75rem auto 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem 4rem;
+}
+
+#challenge {
+  width: min(960px, 100%);
+  display: grid;
+  gap: 1.5rem;
+}
+
+#new-challenge {
+  justify-self: center;
+  padding: 0.85rem 1.8rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: white;
+  background: var(--accent);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#new-challenge:hover,
+#new-challenge:focus-visible {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+#new-challenge:active {
+  transform: translateY(1px);
+}
+
+.challenge-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 18px 45px rgba(40, 60, 120, 0.15);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.text-type {
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  margin: 0;
+}
+
+.prompt {
+  margin: 0;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.difficulty {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 600;
+  background: rgba(0, 85, 255, 0.1);
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+}
+
+.response {
+  font-weight: 600;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  font: inherit;
+  resize: vertical;
+  min-height: 150px;
+}
+
+textarea:focus {
+  outline: 3px solid rgba(0, 85, 255, 0.2);
+}
+
+.reflection {
+  background: rgba(0, 85, 255, 0.08);
+  padding: 1.25rem;
+  border-radius: 16px;
+}
+
+.reflection h3 {
+  margin-top: 0;
+}
+
+footer {
+  font-size: 0.95rem;
+  color: rgba(30, 30, 30, 0.75);
+}
+
+@media (max-width: 640px) {
+  main {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .challenge-card {
+    padding: 1.5rem;
+  }
+}
